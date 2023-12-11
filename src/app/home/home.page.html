@@ -1,0 +1,96 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Tellevoapp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-row class="ion-text-center">
+      <ion-button (click)="irViajes()">
+        <ion-icon name="car-sport-outline" slot="start"></ion-icon> Viajes
+      </ion-button>
+
+      
+      <ion-button (click)="irAPerfil()">
+        <ion-icon name="person-outline" slot="start"></ion-icon> Perfil
+      </ion-button>
+      
+
+      <ion-button (click)="irLogin()">
+        <ion-icon name="close-outline" slot="start"></ion-icon> Cerrar sesión
+      </ion-button>
+    </ion-row>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¿Quiénes somos?</ion-card-title>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p><strong>Nosotros somos una empresa que desarrolla aplicaciones móviles que los estudiantes necesitan.</strong></p>
+        <p><strong>Estamos en:</strong></p>
+        <p>Calle Ficticia 1176</p>
+        <p>Ciudad Imaginaria</p>
+        <p>Provincia de Ensueño</p>
+        <p>Código Postal: 12345</p>
+        <img alt="Silhouette of mountains" src="data:image/png;base64,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">
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>INICIO</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-label style="font-size: 1.5em;">Bienvenido: {{username}}</ion-label>
+  </ion-content>
+  
+ 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>CONDUCTORES </ion-card-title>
+      <ion-card-subtitle>DISPONIBLES</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyu-S0h9TWO3UWPD_alDeye1Nj1YBG9466Ow&usqp=CAU" />
+          </ion-thumbnail>
+          <ion-checkbox>Héctor Mendoza</ion-checkbox>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBk__FOz0eksEDbto8z9Dh-LmnhRvsL7qFIg&usqp=CAU" />
+          </ion-thumbnail>
+         
+          <ion-checkbox>Alejandro Vargas</ion-checkbox>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVXX12MmfHmJQK4srOtItBWyfYxw-kStwVWw&usqp=CAU" />
+          </ion-thumbnail>
+          <ion-checkbox>Martín Ramírez</ion-checkbox>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT-LcRdeNIqMKT6T_SYE-gC189AwqihbOihA&usqp=CAU"/>
+          </ion-thumbnail>
+          <ion-checkbox>Valentina Herrera</ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>

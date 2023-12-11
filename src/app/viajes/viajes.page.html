@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>VIAJES</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="¿Dónde vas?" (ionChange)="buscarUbicacion($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div id="map" style="height: 500px; width: 80%; margin-left: auto; margin-right: auto;"></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-align-items-start ion-justify-content-center">
+      <ion-col size="10">
+        <!-- Botón para crear y confirmar el viaje -->
+        <ion-button expand="full" class="custom-button" (click)="crearYConfirmarViaje()">Crear y Confirmar Viaje</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCglytPP9mNIaRHp3jEsylWkn_46-B4aAg&callback=initMap" async defer></script>
+
+
+
